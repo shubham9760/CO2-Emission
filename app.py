@@ -11,6 +11,50 @@ df_fuel_consumption = pd.read_pickle(r"dataframe.pkl")
 st.set_page_config(page_title="Fuel Consumption Analysis", page_icon="⛽", layout="wide")
 st.title("Fuel Consumption and CO2 Emissions Analysis")
 
+# Add GitHub icon with a button link to the top right
+st.markdown(
+    """
+    <style>
+    .github-link {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        text-decoration: none;
+    }
+    .github-link:hover {
+        opacity: 0.8;
+    }
+    .github-link img {
+        width: 32px;
+    }
+    .github-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #24292e;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    .github-button:hover {
+        background-color: #444;
+    }
+    </style>
+
+    <a href="https://github.com/shubham9760/CO2-Emission" class="github-link" target="_blank">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Link">
+    </a>
+
+    <a href="https://github.com/shubham9760/CO2-Emission" class="github-button" target="_blank">
+        View on GitHub
+    </a>
+    """,
+    unsafe_allow_html=True
+)
+
+
 # Sidebar options
 st.sidebar.header("Navigation")
 option = st.sidebar.selectbox(
